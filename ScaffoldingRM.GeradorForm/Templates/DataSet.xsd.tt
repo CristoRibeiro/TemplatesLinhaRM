@@ -1,0 +1,37 @@
+﻿<#@ template hostspecific="true" language="C#" #>
+<#@ parameter type="System.String" name="NomeClasse" #>
+<#@ parameter type="System.String" name="NomeNameSpace" #>
+<#@ parameter type="System.String" name="NomeTabela" #>
+<#@ import namespace="System" #>
+<#
+string NomeTabelaUpper = NomeTabela.ToUpper();
+#>
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="<#= NomeClasse #>" targetNamespace="http://tempuri.org/<#= NomeClasse #>.xsd" xmlns:mstns="http://tempuri.org/<#= NomeClasse #>.xsd" xmlns="http://tempuri.org/<#= NomeClasse #>.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="<#= NomeClasse #>" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="<#= NomeClasse #>" msprop:Generator_UserDSName="<#= NomeClasse #>">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="<#= NomeTabelaUpper #>" msprop:Generator_UserTableName="<#= NomeTabelaUpper #>" msprop:Generator_RowEvArgName="<#= NomeTabelaUpper #>RowChangeEvent" msprop:Generator_TableVarName="table<#= NomeTabelaUpper #>" msprop:Generator_TablePropName="<#= NomeTabelaUpper #>" msprop:Generator_RowDeletingName="<#= NomeTabelaUpper #>RowDeleting" msprop:Generator_RowChangingName="<#= NomeTabelaUpper #>RowChanging" msprop:Generator_RowDeletedName="<#= NomeTabelaUpper #>RowDeleted" msprop:Generator_RowEvHandlerName="<#= NomeTabelaUpper #>RowChangeEventHandler" msprop:Generator_TableClassName="<#= NomeTabelaUpper #>DataTable" msprop:Generator_RowChangedName="<#= NomeTabelaUpper #>RowChanged" msprop:Generator_RowClassName="<#= NomeTabelaUpper #>Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODCOLIGADA" msprop:Generator_ColumnVarNameInTable="columnCODCOLIGADA" msprop:Generator_ColumnPropNameInRow="CODCOLIGADA" msprop:Generator_ColumnPropNameInTable="CODCOLIGADAColumn" msprop:Generator_UserColumnName="CODCOLIGADA" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:<#= NomeTabelaUpper #>" />
+      <xs:field xpath="mstns:CODCOLIGADA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

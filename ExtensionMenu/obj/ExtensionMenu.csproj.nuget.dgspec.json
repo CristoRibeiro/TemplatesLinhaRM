@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ExtensionMenu\\ExtensionMenu.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ExtensionMenu\\ExtensionMenu.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ExtensionMenu\\ExtensionMenu.csproj",
+        "projectName": "ExtensionMenu",
+        "projectPath": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ExtensionMenu\\ExtensionMenu.csproj",
+        "packagesPath": "C:\\Users\\cristiano.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ExtensionMenu\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\cristiano.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorForm\\ScaffoldingRM.GeradorForm.csproj": {
+                "projectPath": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorForm\\ScaffoldingRM.GeradorForm.csproj"
+              },
+              "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorNegocio\\ScaffoldingRM.GeradorNegocio.csproj": {
+                "projectPath": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorNegocio\\ScaffoldingRM.GeradorNegocio.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Microsoft.VSSDK.BuildTools": {
+              "target": "Package",
+              "version": "[17.4.2119, )"
+            },
+            "Microsoft.VisualStudio.SDK": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[17.0.32112.339, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorForm\\ScaffoldingRM.GeradorForm.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorForm\\ScaffoldingRM.GeradorForm.csproj",
+        "projectName": "ScaffoldingRM.GeradorForm",
+        "projectPath": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorForm\\ScaffoldingRM.GeradorForm.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorNegocio\\ScaffoldingRM.GeradorNegocio.csproj": {
+                "projectPath": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorNegocio\\ScaffoldingRM.GeradorNegocio.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorNegocio\\ScaffoldingRM.GeradorNegocio.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorNegocio\\ScaffoldingRM.GeradorNegocio.csproj",
+        "projectName": "ScaffoldingRM.GeradorNegocio",
+        "projectPath": "C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorNegocio\\ScaffoldingRM.GeradorNegocio.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

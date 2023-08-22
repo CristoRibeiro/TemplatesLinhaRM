@@ -1,0 +1,26 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="ExtensionMenu.c7354383-b75b-469e-acec-4ded725f7c25" Version="1.0" Language="en-US" Publisher="Cristiano Santos Ribeiro da Silva" />
+    <DisplayName>Templates Linha-RM</DisplayName>
+    <Description xml:space="preserve">Com os templates da Linha RM é possivel se concentrar apenas nas regras de negócio, deixando com que os códigos que geralmente se repetem sejam criados automaticamente, evitando erros de escritas, padrões, falta de configurações necessárias, que muitas vezes, tomam bastante tempo para identificar. 
+Com isso produtividade e a eficiência dos DEVs, serão otimizadas, eliminando a necessidade de começar uma classe ou projeto totalmente do Zero.
+
+Economize Tempo Precioso: Com os templates pré-elaborados, você pode pular a fase inicial de configuração e estruturação do código fonte. Isso significa que você pode iniciar seus projetos de maneira rápida e eficiente.
+
+Templ</Description>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="ExtensionMenu.pkgdef" />
+  </Assets>
+</PackageManifest>

@@ -1,0 +1,32 @@
+<Commands package="guidPackage">
+  <Menus>
+    <Menu guid="guidMenu" id="menuCommandId" priority="0x0000" type="Menu">
+      <Parent guid="guidParentMenu" id="parentMenuId" />
+      <CommandFlag>DynamicVisibility</CommandFlag>
+      <Strings>
+        <ButtonText>Menu item text</ButtonText>
+      </Strings>
+    </Menu>
+  </Menus>
+  <Groups>
+    <Group guid="guidGroup" id="groupId" priority="0x0000">
+      <Parent guid="guidParentMenu" id="parentMenuId" />
+    </Group>
+  </Groups>
+  <Buttons>
+    <Button guid="guidPackageCmdSet" id="commandId" priority="0x0100" type="Button">
+      <Parent guid="guidGroup" id="groupId" />
+      <CommandFlag>IconAndText</CommandFlag>
+      <Icon guid="guidImages" id="bmpPic1" />
+      <Strings>
+        <ButtonText>Button text</ButtonText>
+        <CommandName>Command name</CommandName>
+        <ToolTipTitle>Tooltip title</ToolTipTitle>
+        <ToolTipDescription>Tooltip description</ToolTipDescription>
+      </Strings>
+    </Button>
+  </Buttons>
+  <Bitmaps>
+    <Bitmap guid="guidImages" href="Resources\Images_32bit.bmp" usedList="bmpPic1" />
+  </Bitmaps>
+</Commands>

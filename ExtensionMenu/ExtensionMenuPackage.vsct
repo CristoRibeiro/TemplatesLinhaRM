@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!--  This is the file that defines the actual layout and type of the commands.
+        It is divided in different sections (e.g. command definition, command
+        placement, ...), with each defining a specific set of properties.
+        See the comment before each section for more details about how to
+        use it. -->
+
+	<!--  The VSCT compiler (the tool that translates this file into the binary
+        format that VisualStudio will consume) has the ability to run a preprocessor
+        on the vsct file; this preprocessor is (usually) the C++ preprocessor, so
+        it is possible to define includes and macros with the same syntax used
+        in C++ files. Using this ability of the compiler here, we include some files
+        defining some of the constants that we will use inside the file. -->
+
+	<!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+	<Extern href="stdidcmd.h"/>
+
+	<!--This header contains the command ids for the menus provided by the shell. -->
+	<Extern href="vsshlids.h"/>
+
+	<!--The Commands section is where commands, menus, and menu groups are defined.
+      This section uses a Guid to identify the package that provides the command defined inside it. -->
+	<Commands package="guidExtensionMenuPackage">
+		<!-- Inside this section we have different sub-sections: one for the menus, another
+    for the menu groups, one for the buttons (the actual commands), one for the combos
+    and the last one for the bitmaps used. Each element is identified by a command id that
+    is a unique pair of guid and numeric identifier; the guid part of the identifier is usually
+    called "command set" and is used to group different command inside a logically related
+    group; your package should define its own command set in order to avoid collisions
+    with command ids defined by other packages. -->
+
+		<!-- In this section you can define new menu groups. A menu group is a container for
+         other menus or buttons (commands); from a visual point of view you can see the
+         group as the part of a menu contained between two lines. The parent of a group
+         must be a menu. -->
+		<Menus>
+			<Menu guid="guidExtensionMenuPackageCmdSet" id="MainMenu" priority="0x0100" type="Menu">
+				<Parent guid="guidExtensionMenuPackageCmdSet" id="MenuGroup" />
+				<Strings>
+					<ButtonText>Add RM</ButtonText>
+				</Strings>
+			</Menu>
+		</Menus>
+
+		<Groups>
+			<Group guid="guidExtensionMenuPackageCmdSet" id="MenuGroup" priority="0x0200">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+			</Group>
+
+			<Group guid="guidExtensionMenuPackageCmdSet" id="CommandsMenuGruop" priority="0x0300">
+				<Parent guid="guidExtensionMenuPackageCmdSet" id="MainMenu"/>
+			</Group>
+		</Groups>
+		<Buttons>
+			<Button guid="guidExtensionMenuPackageCmdSet" id="CommandMenuAddId" priority="0x0100" type="Button">
+				<Parent guid="guidExtensionMenuPackageCmdSet" id="CommandsMenuGruop" />
+				<Icon guid="guidImages" id="bmpPicArrows" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<Strings>
+					<CommandName>Command</CommandName>
+					<ButtonText>RMSFormEdit</ButtonText>
+				</Strings>
+			</Button>
+			<!--<Button guid="guidExtensionMenuPackageCmdSet" id="CommandMenuAddIdSec" priority="0x0200" type="Button">
+				<Parent guid="guidExtensionMenuPackageCmdSet" id="CommandsMenuGruop" />
+				<Icon guid="guidImages" id="bmpPicX" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<Strings>
+					<CommandName>Command</CommandName>
+					<ButtonText>Adicionar RMAction</ButtonText>
+				</Strings>
+			</Button>-->
+		</Buttons>
+
+		<!--<Button guid="guidExtensionMenuPackageCmdSet" id="CommandMenuAddIdSec" priority="0x0200" type="Button">
+				<Parent guid="guidExtensionMenuPackageCmdSet" id="MyMenuGroup"/>
+				<Icon guid="guidImages" id="bmpPicX" />
+				<Strings>
+					<CommandName>Command2</CommandName>
+					<ButtonText>Adicionar Teste</ButtonText>
+				</Strings>
+			</Button>-->
+
+
+		<!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
+		<Bitmaps>
+			<!--  The bitmap id is defined in a way that is a little bit different from the others:
+            the declaration starts with a guid for the bitmap strip, then there is the resource id of the
+            bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
+            inside a button definition. An important aspect of this declaration is that the element id
+            must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
+			<Bitmap guid="guidImages" href="Resources\CommandMenuAdd.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+		</Bitmaps>
+	</Commands>
+
+	<Symbols>
+		<!-- This is the package guid. -->
+		<GuidSymbol name="guidExtensionMenuPackage" value="{88ed6c3d-fb30-4b15-b772-75e0b662340e}" />
+
+		<!-- This is the guid used to group the menu commands together -->
+		<GuidSymbol name="guidExtensionMenuPackageCmdSet" value="{b7917b4f-00ee-4e90-ada8-64f279a56190}">
+			<IDSymbol name="MainMenu" value="0x1000" />
+			<IDSymbol name="CommandsMenuGruop" value="0x1100" />
+			<IDSymbol name="MenuGroup" value="0x1200" />
+			<IDSymbol name="CommandMenuAddId" value="0x0100" />
+			<IDSymbol name="CommandMenuAddIdSec" value="0x0200" />
+		</GuidSymbol>
+
+		<GuidSymbol name="guidImages" value="{155a968d-4cfb-457e-afdf-cfefc79239ee}" >
+			<IDSymbol name="bmpPic1" value="1" />
+			<IDSymbol name="bmpPic2" value="2" />
+			<IDSymbol name="bmpPicSearch" value="3" />
+			<IDSymbol name="bmpPicX" value="4" />
+			<IDSymbol name="bmpPicArrows" value="5" />
+			<IDSymbol name="bmpPicStrikethrough" value="6" />
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>

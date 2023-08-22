@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SauTesteCris" targetNamespace="http://tempuri.org/SauTesteCris.xsd" xmlns:mstns="http://tempuri.org/SauTesteCris.xsd" xmlns="http://tempuri.org/SauTesteCris.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SauTesteCris" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SauTesteCris" msprop:Generator_UserDSName="SauTesteCris">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SZTESTECRIS" msprop:Generator_UserTableName="SZTESTECRIS" msprop:Generator_RowEvArgName="SZTESTECRISRowChangeEvent" msprop:Generator_TableVarName="tableSZTESTECRIS" msprop:Generator_TablePropName="SZTESTECRIS" msprop:Generator_RowDeletingName="SZTESTECRISRowDeleting" msprop:Generator_RowChangingName="SZTESTECRISRowChanging" msprop:Generator_RowDeletedName="SZTESTECRISRowDeleted" msprop:Generator_RowEvHandlerName="SZTESTECRISRowChangeEventHandler" msprop:Generator_TableClassName="SZTESTECRISDataTable" msprop:Generator_RowChangedName="SZTESTECRISRowChanged" msprop:Generator_RowClassName="SZTESTECRISRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODCOLIGADA" msprop:Generator_ColumnVarNameInTable="columnCODCOLIGADA" msprop:Generator_ColumnPropNameInRow="CODCOLIGADA" msprop:Generator_ColumnPropNameInTable="CODCOLIGADAColumn" msprop:Generator_UserColumnName="CODCOLIGADA" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SZTESTECRIS" />
+      <xs:field xpath="mstns:CODCOLIGADA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
