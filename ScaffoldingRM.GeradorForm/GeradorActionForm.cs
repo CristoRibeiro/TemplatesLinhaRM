@@ -20,7 +20,7 @@ namespace ScaffoldingRM.GeradorForm
     {
       try
       {
-        DTOFonteForm dtoForm = new DTOFonteForm()
+        IDTOFonteBase dtoForm = new DTOFonteForm()
         {
           NomeEntidade = txtNomeForm.Text,
           FullPathProjeto = txtProject.Text,
@@ -41,7 +41,7 @@ namespace ScaffoldingRM.GeradorForm
 
         };
 
-        var comando = FactoryCodigoFonteForm.ObterIntancia(dtoForm);
+        var comando = new FactoryCodigoFonteForm().ObterIntancia(dtoForm);
         comando.GerarCodigoFonte();
         Close();
 

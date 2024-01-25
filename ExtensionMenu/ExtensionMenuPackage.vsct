@@ -62,16 +62,16 @@
 					<CommandName>Command</CommandName>
 					<ButtonText>RMSFormEdit</ButtonText>
 				</Strings>
-			</Button>
-			<!--<Button guid="guidExtensionMenuPackageCmdSet" id="CommandMenuAddIdSec" priority="0x0200" type="Button">
+			</Button>			
+			<Button guid="guidExtensionMenuPackageCmdSet" id="CommandMenuAddIdSec" priority="0x0200" type="Button">
 				<Parent guid="guidExtensionMenuPackageCmdSet" id="CommandsMenuGruop" />
-				<Icon guid="guidImages" id="bmpPicX" />
+				<Icon guid="guidImages" id="bmpPic1" />
 				<CommandFlag>DynamicVisibility</CommandFlag>
 				<Strings>
-					<CommandName>Command</CommandName>
-					<ButtonText>Adicionar RMAction</ButtonText>
+					<CommandName>CommandSec</CommandName>
+					<ButtonText>Adicionar Obj</ButtonText>
 				</Strings>
-			</Button>-->
+			</Button>
 		</Buttons>
 
 		<!--<Button guid="guidExtensionMenuPackageCmdSet" id="CommandMenuAddIdSec" priority="0x0200" type="Button">

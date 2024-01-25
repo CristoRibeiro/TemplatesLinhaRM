@@ -1,7 +1,9 @@
 ﻿using ScaffoldingRM.GeradorNegocio.CodigoFonte.Base;
 using ScaffoldingRM.GeradorNegocio.CodigoFonte.Data;
+using ScaffoldingRM.GeradorNegocio.Enum;
 using ScaffoldingRM.GeradorNegocio.Extensions;
 using ScaffoldingRM.GeradorNegocio.Interface;
+using System.Linq;
 
 namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Modulo
 {
@@ -17,9 +19,10 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Modulo
     {
       base.AdicionarParametros();
 
-      ConfigCodigoFonte.Parametros.Add("NomeClasseDto", ConfigCodigoFonte.Prefixo + ConfigCodigoFonte.NomeEntidade + Constantes.SufixoDTO);
-      ConfigCodigoFonte.Parametros.Add("NomeInstanciaModulo", ConfigCodigoFonte.NomeEntidade);
-      ConfigCodigoFonte.Parametros.Add("NomeIntanciaClasseDto", ConfigCodigoFonte.NomeEntidade.ToCamelCase() + Constantes.SufixoDTO);
+      ConfigCodigoFonte.Parametros.Add("NomeClasseDto", Constantes.PrefixoSaude + ConfigCodigoFonte.NomeEntidade + Constantes.SufixoDTO);
+      ConfigCodigoFonte.Parametros.Add("NomeClasseModulo", Constantes.PrefixoSaude + ConfigCodigoFonte.NomeEntidade + Constantes.SufixoModulo);
+      ConfigCodigoFonte.Parametros.Add("NomeEntidade",   ConfigCodigoFonte.NomeEntidade);
+      ConfigCodigoFonte.Parametros.Add("NomeInstanciaClasseDto", ConfigCodigoFonte.NomeEntidade.ToCamelCase() + Constantes.SufixoDTO);
     }
   }
 }

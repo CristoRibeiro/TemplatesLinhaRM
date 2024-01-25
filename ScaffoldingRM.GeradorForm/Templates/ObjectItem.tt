@@ -6,7 +6,7 @@ using RM.Sau.Lib;
 using System;
 using System.Runtime.Serialization;
 
-namespace <#= NomeNameSpace #>.Intf
+namespace <#= NomeNameSpace #>
 {
   [Serializable]
   [DataContract(Namespace = SauConsts.TOTVSNameSpace)]

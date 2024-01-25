@@ -2,13 +2,14 @@
 <#@ parameter type="System.String" name="NomeClasse" #>
 <#@ parameter type="System.String" name="NomeNameSpace" #>
 <#@ parameter type="System.String" name="NomeClasseProps" #>
-namespace <#= NomeNameSpace #>.Intf
-{ 
-  partial class <#= NomeClasse #>
-  {
-    public new void EndInit()
+
+namespace <#= NomeNameSpace #>
+{
+    partial class <#= NomeClasse #>
     {
-      new <#= NomeClasseProps #>(this);
+        public new void EndInit()
+        {
+            new <#= NomeClasseProps #>(this);
+        }
     }
-  }
 }

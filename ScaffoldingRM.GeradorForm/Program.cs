@@ -16,7 +16,7 @@ namespace ScaffoldingRM.GeradorForm
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new GeradorActionForm("C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorForm\\ScaffoldingRM.GeradorForm"));
+      Application.Run(new GeradorObjetosAvulsoForm("C:\\Users\\cristiano.santos\\source\\repos\\IniciandoScarfolding\\ScaffoldingRM.GeradorForm\\ScaffoldingRM.GeradorForm"));
     }
   }
 }

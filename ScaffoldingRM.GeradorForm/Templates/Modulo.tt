@@ -8,16 +8,15 @@
 using RM.Lib;
 using RM.Lib.Notification;
 using RM.Lib.Server;
-using RM.Sau.<#= NomeNameSpace #>.Intf;
 
-namespace <#= NomeNameSpace #>.Server
+namespace <#= NomeNameSpace #>
 {
   public class <#= NomeClasse #> : RMSModule, I<#= NomeClasse #>
   {
-    public ObjectList<<#= NomeClasseDto #>> ObterLista<#= NomeClasse #> (int codColigada, int cod<#= NomeInstanciaModulo #> )
+    public ObjectList<<#= NomeClasseDto #>> ObterLista<#= NomeInstanciaModulo #> (int codColigada, int cod<#= NomeInstanciaModulo #> )
     {
       using (var obj = CreateObject<<#= NomeObject #>>())
-        return obj.ObterLista<#= NomeClasse #>(codColigada, cod<#= NomeInstanciaModulo #>);
+        return obj.ObterLista<#= NomeInstanciaModulo #>(codColigada, cod<#= NomeInstanciaModulo #>);
     }
 
     public INotification ValidarRegistro(<#= NomeClasseDto #> <#= NomeIntanciaClasseDto #>)

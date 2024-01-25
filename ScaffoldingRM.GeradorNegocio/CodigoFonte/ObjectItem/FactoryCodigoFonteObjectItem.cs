@@ -1,18 +1,19 @@
 ﻿using ScaffoldingRM.GeradorNegocio.Common;
+using ScaffoldingRM.GeradorNegocio.DTO;
 using ScaffoldingRM.GeradorNegocio.Interface;
 
 namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.ObjectItem
 {
-  public static class FactoryCodigoFonteObjectItem
+  public class FactoryCodigoFonteObjectItem : IFactoryCodigoFonte
   {
-    public static ICodigoFonte ObterIntancia(string nomeEntidade, string pathProjeto)
+    public ICodigoFonte ObterIntancia(IDTOFonteBase dtoBase)
     {
       IGeradorCodigoFonte geradorCodigoFonte = GeradorCodigoFonteFactory.ObterInstancia();
 
       IConfigCodigoFonte configForm = FactoryConfigCodigoFonteObjectItem.ObterIntancia();
-      configForm.NomeEntidade = nomeEntidade;
-      configForm.Projeto = new Projeto(pathProjeto);
-      
+      configForm.NomeEntidade = dtoBase.NomeEntidade;
+      configForm.Projeto = new Projeto(dtoBase.FullPathProjeto);
+
       return new CriarObjectItemCodigoFonte(configForm, geradorCodigoFonte);
     }
   }

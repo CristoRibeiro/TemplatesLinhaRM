@@ -36,8 +36,10 @@ namespace ScaffoldingRM.GeradorNegocio
       var codigoFonteSaida = $@"{configuracaoCodigoFonte.Projeto.Diretorio}\{configuracaoCodigoFonte.NomeArquivo}.{configuracaoCodigoFonte.Extensao}";
 
       var gerador = new TemplateGenerator();
+      
       AdicionarParametrosTemplate(configuracaoCodigoFonte, gerador);
 
+      
       var geradoComSucesso = gerador.ProcessTemplateAsync(templateCodigoFonte, codigoFonteSaida).Result;
 
       if (!geradoComSucesso)

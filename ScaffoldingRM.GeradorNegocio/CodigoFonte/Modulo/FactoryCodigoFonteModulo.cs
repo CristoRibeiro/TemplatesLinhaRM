@@ -5,9 +5,9 @@ using ScaffoldingRM.GeradorNegocio.Interface;
 
 namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Modulo
 {
-  public static class FactoryCodigoFonteModulo
+  public class FactoryCodigoFonteModulo : IFactoryCodigoFonte
   {
-    public static ICodigoFonte ObterIntancia(DTOFonteModulo moduloDto)
+    public ICodigoFonte ObterIntancia(IDTOFonteBase moduloDto)
     {
       IGeradorCodigoFonte geradorCodigoFonte = GeradorCodigoFonteFactory.ObterInstancia();
 
@@ -15,8 +15,8 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Modulo
       configModulo.NomeEntidade = moduloDto.NomeEntidade;
       configModulo.Projeto = new Projeto(moduloDto.FullPathProjeto);
 
-      var pathIntf = moduloDto.FullPathProjeto.Replace(".Data.", ".Intf.");
-      pathIntf = pathIntf.Replace(".Data\\", ".Intf\\");
+      var pathIntf = moduloDto.FullPathProjeto.Replace(".Server.", ".Intf.");
+      pathIntf = pathIntf.Replace(".Server\\", ".Intf\\");
 
       IConfigCodigoFonte configInterfaceModulo = FactoryConfigCodigoFonteInterfaceModulo.ObterIntancia();
       configInterfaceModulo.NomeEntidade = moduloDto.NomeEntidade;

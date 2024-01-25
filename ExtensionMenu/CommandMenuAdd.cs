@@ -22,7 +22,7 @@ namespace ExtensionMenu
     /// Command ID.
     /// </summary>
     public const int CommandId = 0x0100;
-    //public const int CommandIdSec = 0x0101; 
+    public const int CommandIdSec = 0x0200; 
     /// <summary>
     /// Command menu group (command set GUID).
     /// </summary>
@@ -47,11 +47,11 @@ namespace ExtensionMenu
       var menuCommandID = new CommandID(CommandSet, CommandId);
       var menuItem = new MenuCommand(this.Execute, menuCommandID);
 
-      //var menuCommandIDSec = new CommandID(CommandSet, CommandIdSec);
-      //var menuItemSec = new MenuCommand(this.Execute, menuCommandIDSec);
+      var menuCommandIDSec = new CommandID(CommandSet, CommandIdSec);
+      var menuItemSec = new MenuCommand(this.ExecuteSec, menuCommandIDSec);
 
       commandService.AddCommand(menuItem);
-      //commandService.AddCommand(menuItemSec);
+      commandService.AddCommand(menuItemSec);
     }
 
 
@@ -107,6 +107,18 @@ namespace ExtensionMenu
       var form = new GeradorActionForm(assemblyName);
       
 
+      form.Show();
+    }
+
+    private void ExecuteSec(object sender, EventArgs e)
+    {
+      var item = GetSelectedSolutionExplorerItem();
+
+      var assemblyName = item.FullName;
+
+      ThreadHelper.ThrowIfNotOnUIThread();
+
+      var form = new GeradorObjetosAvulsoForm(assemblyName);
       form.Show();
     }
 

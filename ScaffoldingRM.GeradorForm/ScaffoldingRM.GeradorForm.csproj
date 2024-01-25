@@ -81,10 +81,20 @@
     <Compile Include="GeradorObjectItem.Designer.cs">
       <DependentUpon>GeradorObjectItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeradorObjetosAvulsoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeradorObjetosAvulsoForm.Designer.cs">
+      <DependentUpon>GeradorObjetosAvulsoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoClasseComboBox.cs" />
     <EmbeddedResource Include="GeradorActionForm.resx">
       <DependentUpon>GeradorActionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeradorObjetosAvulsoForm.resx">
+      <DependentUpon>GeradorObjetosAvulsoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -192,6 +202,13 @@
     <None Include="Templates\InterfaceModulo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>InterfaceModulo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\DataSet.Designer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

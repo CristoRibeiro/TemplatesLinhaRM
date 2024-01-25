@@ -6,9 +6,7 @@
         <Description xml:space="preserve">Com os templates da Linha RM é possivel se concentrar apenas nas regras de negócio, deixando com que os códigos que geralmente se repetem sejam criados automaticamente, evitando erros de escritas, padrões, falta de configurações necessárias, que muitas vezes, tomam bastante tempo para identificar. 
 Com isso produtividade e a eficiência dos DEVs, serão otimizadas, eliminando a necessidade de começar uma classe ou projeto totalmente do Zero.
 
-Economize Tempo Precioso: Com os templates pré-elaborados, você pode pular a fase inicial de configuração e estruturação do código fonte. Isso significa que você pode iniciar seus projetos de maneira rápida e eficiente.
-
-Templ</Description>
+Economize Tempo Precioso: Com os templates pré-elaborados, você pode pular a fase inicial de configuração e estruturação do código fonte. Isso significa que você pode iniciar seus projetos de maneira rápida e eficiente.</Description>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">

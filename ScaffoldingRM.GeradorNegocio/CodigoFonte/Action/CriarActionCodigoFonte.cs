@@ -33,7 +33,7 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Action
       base.AdicionarParametros();
       ConfigCodigoFonte.Parametros.Add("NomeCaptionForm", string.Format("SSCaption{0}", ConfigCodigoFonte.NomeEntidade));
       ConfigCodigoFonte.Parametros.Add("CodigoSeguranca", "0");
-      ConfigCodigoFonte.Parametros.Add("TipoRmsAction", "RMSActionView");
+      ConfigCodigoFonte.Parametros.Add("TipoRmsAction", "RMSActionMasterView");
 
     }
   }

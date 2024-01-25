@@ -3,21 +3,22 @@
 <#@ parameter type="System.String" name="NomeNameSpace" #>
 <#@ parameter type="System.String" name="NomeClasseDto" #>
 <#@ parameter type="System.String" name="NomeInstanciaModulo" #>
-<#@ parameter type="System.String" name="NomeIntanciaClasseDto" #>
-using <#= NomeNameSpace #>.Intf;
+<#@ parameter type="System.String" name="NomeEntidade" #>
+<#@ parameter type="System.String" name="NomeInstanciaClasseDto" #>
 using RM.Sau.Lib;
+using RM.Lib;
 using System;
 using System.ServiceModel;
 
-namespace <#= NomeNameSpace #>.Intf.Interfaces
+namespace <#= NomeNameSpace #>
 {
   [ServiceContract(Namespace = SauConsts.TOTVSNameSpace)]
-  public interface I<#= NomeClasse #> : IRMSModule
+  public interface <#= NomeClasse #> : IRMSModule
   {
     [OperationContract]
-    ObjectList<<#= NomeClasseDto #>> ObterLista<#= NomeClasse #> (int codColigada, int cod<#= NomeInstanciaModulo #> );
+    ObjectList<<#= NomeClasseDto #>> ObterLista<#= NomeEntidade #> (int codColigada, int cod<#= NomeEntidade #> );
 
     [OperationContract]
-    bool ExisteRegistro(<#= NomeClasseDto #> <#= NomeIntanciaClasseDto #>);
+    bool ExisteRegistro(<#= NomeClasseDto #> <#= NomeInstanciaClasseDto #>);
   }
 }

@@ -36,7 +36,12 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.DataSet
       configDataSetXsd.NomeEntidade = ConfigCodigoFonte.NomeEntidade;
       configDataSetXsd.Projeto = new Projeto(ConfigCodigoFonte.Projeto.NomeProjetoCompleto);
 
+      IConfigCodigoFonte configDataSetDesigner = FactoryConfigCodigoFonteDataSetDesigner.ObterIntancia();
+      configDataSetDesigner.NomeEntidade = ConfigCodigoFonte.NomeEntidade;
+      configDataSetDesigner.Projeto = new Projeto(ConfigCodigoFonte.Projeto.NomeProjetoCompleto);
+
       ConfigCodigoFonte.FontesAdicionais.Add(TipoClasse.DataSetXsd, new CriarDataSetCodigoFonteXsd(configDataSetXsd, GeradorCodigoFonte, NomeTabela));
+      ConfigCodigoFonte.FontesAdicionais.Add(TipoClasse.DataSetDesigner, new CriarDataSetCodigoFonteDesigner(configDataSetDesigner, GeradorCodigoFonte, NomeTabela));
     }
   }
 }

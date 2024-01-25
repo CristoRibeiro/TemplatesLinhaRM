@@ -5,13 +5,13 @@
 <#@ parameter type="System.String" name="ResourceDataProps" #>
 <#@ import namespace="System" #>
 using RM.Lib;
-using <#= NomeNameSpace #>.Intf.Properties
+using <#= NomeNameSpace #>.Properties;
 <#
 string NomeTabelaUpper = NomeTabela.ToUpper();
 string NomeTabelaLower = NomeTabela.ToLower();
 #>
 
-namespace <#= NomeNameSpace #>.Intf
+namespace <#= NomeNameSpace #>
 {
   public class <#= NomeClasse #> : DataSetProperties
   {
@@ -22,7 +22,7 @@ namespace <#= NomeNameSpace #>.Intf
       System.Data.DataTable <#= NomeTabela #> = dataSet.Tables[<#= NomeTabelaLower #>];
       if (<#= NomeTabelaLower #> != null)
       {
-        DataProps.SetProps(<#= NomeTabelaLower #>, TabProps.Caption, Resources.<#= ResourceDataProps #>);
+        DataProps.SetProps(<#= NomeTabela #>, TabProps.Caption, Resources.<#= ResourceDataProps #>);
 
         DataProps.SetProps(<#= NomeTabela #>, "CODCOLIGADA",
           ColProps.Caption, Resources.SSauCaptionCODCOLIGADA,

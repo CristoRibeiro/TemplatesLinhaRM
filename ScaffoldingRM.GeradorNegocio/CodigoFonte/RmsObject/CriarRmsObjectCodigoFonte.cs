@@ -16,6 +16,7 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.RmsObject
     public override void AdicionarParametros()
     {
       base.AdicionarParametros();
+      ConfigCodigoFonte.Parametros.Add("NomeEntidade", ConfigCodigoFonte.NomeEntidade);
       ConfigCodigoFonte.Parametros.Add("NomeDto", ConfigCodigoFonte.Prefixo + ConfigCodigoFonte.NomeEntidade + Constantes.SufixoDTO);
       ConfigCodigoFonte.Parametros.Add("NomeInstanciaDto", ConfigCodigoFonte.NomeEntidade.ToCamelCase() + Constantes.SufixoDTO);
     }

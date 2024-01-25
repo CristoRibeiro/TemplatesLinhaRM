@@ -13,13 +13,12 @@ using System.Data;
 using RM.Lib;
 using RM.Lib.Server;
 using RM.Lib.Notification;
-using <#= NomeNameSpace #>.Intf;
 
 <#
 string NomeTabelaLower = NomeTabela.ToLower();
 #>
 
-namespace <#= NomeNameSpace #>.Data
+namespace <#= NomeNameSpace #>
 {
   [System.ServiceModel.ServiceBehavior(IncludeExceptionDetailInFaults = true)]
   [RMSServerInfo(typeof(Properties.Resources), nameof(Properties.Resources.<#= NomeResourceInfoServer #>), CodSistema.Sau)]
@@ -52,7 +51,7 @@ namespace <#= NomeNameSpace #>.Data
 		INotification notification = Notification.Instance;
 	
 		using (var dbo = new DataObjects())
-		using (var <#= NomeInstanciaModulo #> = CreateModule<I<#= NomeModulo #>>("<#= NomeModulo #>>"))
+		using (var <#= NomeInstanciaModulo #> = CreateModule<I<#= NomeModulo #>>("<#= NomeModulo #>"))
 		{
 			var <#= NomeInstanciaDto #> = dbo.ReadFromRow<<#= NomeDto #>>(row);
 		

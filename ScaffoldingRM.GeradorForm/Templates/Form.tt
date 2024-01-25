@@ -3,7 +3,7 @@
 <#@ parameter type="System.String" name="NomeNameSpace" #>
 using RM.Lib.WinForms;
 
-namespace <#= NomeNameSpace #>.Form
+namespace <#= NomeNameSpace #>
 {
   public partial class <#= NomeClasse #> : RMSFormEdit
   {

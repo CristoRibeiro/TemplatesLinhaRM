@@ -3,13 +3,9 @@
 <#@ parameter type="System.String" name="NomeNameSpace" #>
 <#@ parameter type="System.String" name="NomeClasseData" #>
 <#@ parameter type="System.String" name="NomeClasseForm" #>
-using RM.Lib;
-using RM.Lib.WinForms;
-using System.ComponentModel;
-
-namespace <#= NomeNameSpace #>.Form
+namespace <#= NomeNameSpace #>
 {
-    public class <#= NomeClasse #> 
+    partial class <#= NomeClasse #> 
     {
         /// <summary>
         /// Required designer variable.
@@ -38,8 +34,8 @@ namespace <#= NomeNameSpace #>.Form
         private void InitializeComponent()
         {
           this.components = new System.ComponentModel.Container();
-          this.DataServerName = " <#= NomeClasseData #>";
-          this.FormName = " <#= NomeClasseForm #>";          
+          this.DataServerName = "<#= NomeClasseData #>";
+          this.FormName = "<#= NomeClasseForm #>";          
         }
         #endregion
     }

@@ -6,5 +6,6 @@
     public const string SufixoModulo = "Mod";
     public const string SufixoDTO = "Dto";
     public const string SufixoObj = "Obj";
+    public const string PrefixoSaude = "Sau";
   }
 }

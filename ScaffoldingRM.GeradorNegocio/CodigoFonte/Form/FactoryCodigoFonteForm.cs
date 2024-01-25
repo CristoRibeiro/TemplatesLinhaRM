@@ -7,23 +7,23 @@ using ScaffoldingRM.GeradorNegocio.Interface;
 
 namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Form
 {
-  public static class FactoryCodigoFonteForm
+  public class FactoryCodigoFonteForm : IFactoryCodigoFonte
   {
-    public static ICodigoFonte ObterIntancia(DTOFonteForm formDto)
+    public ICodigoFonte ObterIntancia(IDTOFonteBase formDtoBase)
     {
+      var formDTO = (DTOFonteForm)formDtoBase;
+
       IGeradorCodigoFonte geradorCodigoFonte = GeradorCodigoFonteFactory.ObterInstancia();
 
       IConfigCodigoFonte configForm = FactoryConfigCodigoFonteForm.ObterIntancia();
-      configForm.NomeEntidade = formDto.NomeEntidade;
-      configForm.Projeto = new Projeto(formDto.FullPathProjeto);
+      configForm.NomeEntidade = formDTO.NomeEntidade;
+      configForm.Projeto = new Projeto(formDTO.FullPathProjeto);
 
-      if (formDto.GerarData)
-        configForm.FontesAdicionais.Add(TipoClasse.Data, FactoryCodigoFonteData.ObterIntancia(formDto.DtoData));
+      if (formDTO.GerarData)
+        configForm.FontesAdicionais.Add(TipoClasse.Data, new FactoryCodigoFonteData().ObterIntancia(formDTO.DtoData));
 
-      if (formDto.GerarAction)
-      {
-        configForm.FontesAdicionais.Add(TipoClasse.Action, FactoryCodigoFonteAction.ObterIntancia(formDto.NomeEntidade, formDto.FullPathProjetoAction));
-      }
+      if (formDTO.GerarAction)
+        configForm.FontesAdicionais.Add(TipoClasse.Action, new FactoryCodigoFonteAction().ObterIntancia(formDTO));
 
       return new CriarFormCodigoFonte(configForm, geradorCodigoFonte);
     }

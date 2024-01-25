@@ -4,15 +4,21 @@
 <#@ parameter type="System.String" name="NomeTabela" #>
 <#@ parameter type="System.String" name="NomeDto" #>
 <#@ parameter type="System.String" name="NomeInstanciaDto" #>
+<#@ parameter type="System.String" name="NomeEntidade" #>
+using RM.Lib;
 using RM.Lib.Server;
-using RM.Sau.<#= NomeNameSpace #>.Intf;
 using System;
 
-namespace <#= NomeNameSpace #>.Server
+namespace <#= NomeNameSpace #>
 {
   public class <#= NomeClasse #> : RMSObject
   {
     public bool ExisteRegistro(<#= NomeDto #> <#= NomeInstanciaDto #>)
+    {
+      throw new NotImplementedException();      
+    }
+
+    public ObjectList<<#= NomeDto #>> ObterLista<#= NomeEntidade #>(int codColigada, int cod<#= NomeEntidade #>)
     {
       throw new NotImplementedException();      
     }

@@ -4,8 +4,11 @@
 <#@ parameter type="System.String" name="NomeCaptionForm" #>
 <#@ parameter type="System.String" name="CodigoSeguranca" #>
 <#@ parameter type="System.String" name="TipoRmsAction" #>
+using System.ComponentModel;
+using RM.Lib;
+using RM.Lib.WinForms;
 
-namespace <#= NomeNameSpace #>.Form
+namespace <#= NomeNameSpace #>
 {
     [ActionInfo(typeof(Properties.Resources), nameof(Properties.Resources.<#= NomeCaptionForm #>), CodSistema.Sau, <#= CodigoSeguranca #>)]
     public partial class <#= NomeClasse #> : <#= TipoRmsAction #>

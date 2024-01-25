@@ -165,9 +165,11 @@
     <Compile Include="CodigoFonte\DataProps\FactoryCodigoFonteDataProps.cs" />
     <Compile Include="CodigoFonte\DataProps\FactoryConfigCodigoFonteDataProps.cs" />
     <Compile Include="CodigoFonte\DataSet\CriarDataSetCodigoFonte.cs" />
+    <Compile Include="CodigoFonte\DataSet\CriarDataSetCodigoFonteDesigner.cs" />
     <Compile Include="CodigoFonte\DataSet\CriarDataSetCodigoFonteXsd.cs" />
     <Compile Include="CodigoFonte\DataSet\FactoryCodigoFonteDataSet.cs" />
     <Compile Include="CodigoFonte\DataSet\FactoryConfigCodigoFonteDataSet.cs" />
+    <Compile Include="CodigoFonte\DataSet\FactoryConfigCodigoFonteDataSetDesigner.cs" />
     <Compile Include="CodigoFonte\DataSet\FactoryConfigCodigoFonteDataSetXsd.cs" />
     <Compile Include="CodigoFonte\Data\Contantes.cs" />
     <Compile Include="CodigoFonte\Form\CriarFormCodigoFonteDesigner.cs" />
@@ -194,6 +196,9 @@
     <Compile Include="CodigoFonte\Form\CriarFormCodigoFonte.cs" />
     <Compile Include="Common\Projeto.cs" />
     <Compile Include="DTO\DTOFonteBase.cs" />
+    <Compile Include="DTO\IDTOFonteBase.cs" />
+    <Compile Include="DTO\DTOFonteDataProps.cs" />
+    <Compile Include="DTO\DTOFonteDataSet.cs" />
     <Compile Include="DTO\DTOFonteModulo.cs" />
     <Compile Include="DTO\DTOFonteData.cs" />
     <Compile Include="DTO\DTOFonteForm.cs" />
@@ -205,6 +210,7 @@
     <Compile Include="GeradorCodigoFonteFactoryTFVC.cs" />
     <Compile Include="Interface\IConfigCodigoFonte.cs" />
     <Compile Include="Interface\ICodigoFonte.cs" />
+    <Compile Include="Interface\IFactoryCodigoFonte.cs" />
     <Compile Include="Interface\IGeradorCodigoFonte.cs" />
     <Compile Include="GeradorCodigoFonte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
