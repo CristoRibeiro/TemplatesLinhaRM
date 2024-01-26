@@ -33,8 +33,6 @@
       this.nomeAction = new System.Windows.Forms.Label();
       this.label1 = new System.Windows.Forms.Label();
       this.txtSaidaAction = new System.Windows.Forms.TextBox();
-      this.cbbTemplateAction = new System.Windows.Forms.ComboBox();
-      this.label2 = new System.Windows.Forms.Label();
       this.label3 = new System.Windows.Forms.Label();
       this.button1 = new System.Windows.Forms.Button();
       this.txtProject = new System.Windows.Forms.TextBox();
@@ -78,17 +76,6 @@
       resources.ApplyResources(this.txtSaidaAction, "txtSaidaAction");
       this.txtSaidaAction.Name = "txtSaidaAction";
       this.txtSaidaAction.ReadOnly = true;
-      // 
-      // cbbTemplateAction
-      // 
-      this.cbbTemplateAction.FormattingEnabled = true;
-      resources.ApplyResources(this.cbbTemplateAction, "cbbTemplateAction");
-      this.cbbTemplateAction.Name = "cbbTemplateAction";
-      // 
-      // label2
-      // 
-      resources.ApplyResources(this.label2, "label2");
-      this.label2.Name = "label2";
       // 
       // label3
       // 
@@ -226,8 +213,6 @@
       this.Controls.Add(this.txtProject);
       this.Controls.Add(this.button1);
       this.Controls.Add(this.label3);
-      this.Controls.Add(this.label2);
-      this.Controls.Add(this.cbbTemplateAction);
       this.Controls.Add(this.txtSaidaAction);
       this.Controls.Add(this.label1);
       this.Controls.Add(this.nomeAction);
@@ -250,8 +235,6 @@
     private System.Windows.Forms.Label nomeAction;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.TextBox txtSaidaAction;
-    private System.Windows.Forms.ComboBox cbbTemplateAction;
-    private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.TextBox txtProject;

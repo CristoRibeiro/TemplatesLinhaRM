@@ -1,19 +1,17 @@
 <#@ template hostspecific="true" language="C#" #>
-<#@ parameter type="System.String" name="NomeClasse" #>
 <#@ parameter type="System.String" name="NomeNameSpace" #>
+<#@ parameter type="System.String" name="NomeClasse" #>
 using RM.Lib;
-using RM.Sau.Lib;
 using System;
 using System.Runtime.Serialization;
 
 namespace <#= NomeNameSpace #>
 {
   [Serializable]
-  [DataContract(Namespace = SauConsts.TOTVSNameSpace)]
-  public class <#= NomeClasse #> : ObjectItem
+  [DataContract(Namespace = Lib.SauConsts.TOTVSNameSpace)]
+  public class <#= NomeClasse #> : RMSParamsProc
   {
     [DataMember]
-    [Column(Name = "CODCOLIGADA")]
     public int CodColigada { get; set; }
   }
 }

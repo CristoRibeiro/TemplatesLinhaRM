@@ -10,6 +10,7 @@ namespace ScaffoldingRM.GeradorNegocio.Interface
     Projeto Projeto { get; set; }
     IDictionary<string, string> Parametros { get; }
     IDictionary<TipoClasse, ICodigoFonte> FontesAdicionais { get; }
+    IList<string> Resources { get; }
     string Prefixo { get; }
     string Sufixo { get; }
     string Template { get; }

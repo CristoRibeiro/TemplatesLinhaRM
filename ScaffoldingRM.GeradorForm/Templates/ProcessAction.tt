@@ -1,0 +1,27 @@
+<#@ template hostspecific="true" language="C#" #>
+<#@ parameter type="System.String" name="NomeClasse" #>
+<#@ parameter type="System.String" name="NomeNameSpace" #>
+<#@ parameter type="System.String" name="NomeCaptionForm" #>
+<#@ parameter type="System.String" name="NomeClasseServer" #>
+<#@ parameter type="System.String" name="NomeClasseForm" #>
+<#@ parameter type="System.String" name="TipoRmsAction" #>
+using RM.Lib;
+using RM.Lib.WinForms;
+
+namespace <#= NomeNameSpace #>
+{
+  [ActionInfo(typeof(Properties.Resources), nameof(Properties.Resources.<#= NomeCaptionForm #>), CodSistema.Sau, 0)]
+  public class <#= NomeClasse #> : <#= TipoRmsAction #>
+  {
+    protected override void InitializeAction()
+    {
+      base.InitializeAction();
+
+      FormName = "<#= NomeClasseForm #>";
+      ServerName = "<#= NomeClasseServer #>";
+      NeedPrimaryKey = false;
+    }
+
+  }
+}
+

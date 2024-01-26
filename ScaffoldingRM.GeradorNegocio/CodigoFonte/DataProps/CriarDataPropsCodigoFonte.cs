@@ -1,4 +1,5 @@
 ﻿using ScaffoldingRM.GeradorNegocio.CodigoFonte.Base;
+using ScaffoldingRM.GeradorNegocio.CodigoFonte.Data;
 using ScaffoldingRM.GeradorNegocio.Interface;
 
 namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.DataProps
@@ -16,8 +17,12 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.DataProps
     public override void AdicionarParametros()
     {
       base.AdicionarParametros();
+
+      string nomeResource = "S" + ConfigCodigoFonte.Prefixo + ConfigCodigoFonte.NomeEntidade;
+      ConfigCodigoFonte.Resources.Add(nomeResource);
+
       ConfigCodigoFonte.Parametros.Add("NomeTabela", NomeTabela);
-      ConfigCodigoFonte.Parametros.Add("ResourceDataProps", "S" + ConfigCodigoFonte.Prefixo + ConfigCodigoFonte.NomeEntidade); 
+      ConfigCodigoFonte.Parametros.Add("ResourceDataProps", nomeResource); 
     }
 
   }

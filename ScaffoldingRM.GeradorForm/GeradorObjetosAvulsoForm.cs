@@ -1,7 +1,9 @@
-﻿using ScaffoldingRM.GeradorNegocio.DTO;
+﻿using ScaffoldingRM.GeradorNegocio.CodigoFonte.Data;
+using ScaffoldingRM.GeradorNegocio.DTO;
 using ScaffoldingRM.GeradorNegocio.Enum;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Forms;
 
@@ -10,6 +12,8 @@ namespace ScaffoldingRM.GeradorForm
   public partial class GeradorObjetosAvulsoForm : Form
   {
     public bool ativouTabOpcoesData = false;
+    public bool ativouTabOpcoesProcess = false;
+
     public GeradorObjetosAvulsoForm(string project)
     {
       InitializeComponent();
@@ -17,6 +21,7 @@ namespace ScaffoldingRM.GeradorForm
       CarregarComboBox();
       rmsTabControl1.TabPages.Remove(tabTabela);
       rmsTabControl1.TabPages.Remove(tabData);
+      rmsTabControl1.TabPages.Remove(tabProcess);
     }
 
     private void CarregarComboBox()
@@ -30,6 +35,12 @@ namespace ScaffoldingRM.GeradorForm
         new TipoClasseComboBox(TipoClasse.ObjectItem.Descricao, TipoClasse.ObjectItem),
         new TipoClasseComboBox(TipoClasse.Props.Descricao, TipoClasse.Props),
         new TipoClasseComboBox(TipoClasse.RMSObject.Descricao, TipoClasse.RMSObject),
+        new TipoClasseComboBox(TipoClasse.ProcessAction.Descricao, TipoClasse.ProcessAction),
+        new TipoClasseComboBox(TipoClasse.ProcessForm.Descricao, TipoClasse.ProcessForm),
+        new TipoClasseComboBox(TipoClasse.ProcessServer.Descricao, TipoClasse.ProcessServer),
+        new TipoClasseComboBox(TipoClasse.ProcessParamsProc.Descricao, TipoClasse.ProcessParamsProc),
+        new TipoClasseComboBox(TipoClasse.RMSServer.Descricao, TipoClasse.RMSServer),
+        new TipoClasseComboBox(TipoClasse.InterfaceRMSServer.Descricao, TipoClasse.InterfaceRMSServer),
       };
 
       BindingSource bsCustomers = new BindingSource();
@@ -37,12 +48,18 @@ namespace ScaffoldingRM.GeradorForm
       cbbTipoObj.DataSource = bsCustomers.DataSource;
       cbbTipoObj.DisplayMember = "Nome";
       cbbTipoObj.ValueMember = "TipoClasse";
-
     }
 
     private void btnGerarObj_Click(object sender, EventArgs e)
     {
-      setNextTab();
+      try
+      {
+        setNextTab();
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show("Ocorreu uma falha ao gerar os templates. " + ex.Message);
+      }
     }
 
     private void setNextTab()
@@ -58,6 +75,13 @@ namespace ScaffoldingRM.GeradorForm
       {
         tabData.Show();
         rmsTabControl1.SelectedTab = tabData;
+        return;
+      }
+
+      if (!ativouTabOpcoesProcess && GerandoObjetoProcess())
+      {
+        tabProcess.Show();
+        rmsTabControl1.SelectedTab = tabProcess;
         return;
       }
 
@@ -85,16 +109,29 @@ namespace ScaffoldingRM.GeradorForm
       if (PossuiNomeTabela())
         retorno = ObterDtoTabela();
 
+      if (GerandoObjetoProcess())
+        retorno = ObterDtoProcess();
+
       return retorno;
     }
 
     private bool EhDTOPadrao()
     {
+      List<TipoClasse> tiposDtoPadrao = new List<TipoClasse>
+      {
+        TipoClasse.Modulo,
+        TipoClasse.Action,
+        TipoClasse.ObjectItem,
+        TipoClasse.RMSObject,
+        TipoClasse.Form,
+        TipoClasse.ProcessServer,
+        TipoClasse.ProcessParamsProc,
+        TipoClasse.RMSServer,
+        TipoClasse.InterfaceRMSServer,
+      };
       var tipoObj = cbbTipoObj.Text;
-      return (tipoObj == TipoClasse.Modulo.Descricao ||
-             tipoObj == TipoClasse.Action.Descricao ||
-             tipoObj == TipoClasse.ObjectItem.Descricao ||
-             tipoObj == TipoClasse.RMSObject.Descricao);
+
+      return tiposDtoPadrao.Any(x => x.Descricao == tipoObj);
     }
 
     private IDTOFonteBase ObterDtoPadrao()
@@ -115,6 +152,7 @@ namespace ScaffoldingRM.GeradorForm
     }
 
     private bool GerandoObjetoData() => TipoClasse.Data.Descricao == cbbTipoObj.Text;
+    private bool GerandoObjetoProcess() => TipoClasse.ProcessAction.Descricao == cbbTipoObj.Text;
 
     private IDTOFonteBase ObterDtoTabela()
     {
@@ -158,12 +196,29 @@ namespace ScaffoldingRM.GeradorForm
       return null;
     }
 
+    private IDTOFonteBase ObterDtoProcess()
+    {
+      return new DTOFonteProcessAction
+      {
+        FullPathProjeto = txtProject.Text,
+        NomeEntidade = txtNomeObj.Text,
+        GerarProcessForm = ckbGerarFormProcess.Checked,
+        GerarModulo = ckbGerarModuloProcess.Checked,
+        GerarDto = ckbGerarObjItemProcess.Checked,
+        GerarProcessParmsProc = ckbGerarParamsProcProcess.Checked,
+        GerarProcessServer = ckbGerarServerProcess.Checked,
+        GerarProcessRmsObject = ckbGerarRmsObjectProcess.Checked,
+        GerarProcessRmsServer = ckbGerarRmsServer.Checked
+      };
+    }
+
     private void rmsTabControl1_SelectedIndexChanged(object sender, EventArgs e)
     {
       if (rmsTabControl1.SelectedTab == tabData)
-      {
         ativouTabOpcoesData = true;
-      }
+
+      if (rmsTabControl1.SelectedTab == tabProcess)
+        ativouTabOpcoesProcess = true;
     }
 
     private void cbbTipoObj_SelectedIndexChanged(object sender, EventArgs e)
@@ -177,12 +232,32 @@ namespace ScaffoldingRM.GeradorForm
         AdicionarTabPage(tabData);
       else
         rmsTabControl1.TabPages.Remove(tabData);
+
+      if (GerandoObjetoProcess())
+        AdicionarTabPage(tabProcess);
+      else
+        rmsTabControl1.TabPages.Remove(tabProcess);
+
+      AlterarNomeObj();
     }
 
     private void AdicionarTabPage(TabPage tabData)
     {
       if (!rmsTabControl1.TabPages.Contains(tabData))
         rmsTabControl1.TabPages.Add(tabData);
+    }
+
+    private void txtNomeObj_TextChanged(object sender, EventArgs e)
+    {
+      AlterarNomeObj();
+    }
+
+    private void AlterarNomeObj()
+    {
+      if (!string.IsNullOrWhiteSpace(txtNomeObj.Text))
+        txtSaidaAction.Text = Constantes.PrefixoSaude + txtNomeObj.Text + ((TipoClasse)cbbTipoObj.SelectedValue).Value;
+      else
+        txtSaidaAction.Text = string.Empty;
     }
   }
 }

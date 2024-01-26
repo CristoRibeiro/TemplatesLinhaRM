@@ -9,6 +9,7 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Base
   {
     private IDictionary<TipoClasse, ICodigoFonte> comandosAdicionais;
     private IDictionary<string, string> parametros;
+    private IList<string> resources;
     public string NomeEntidade { get; set; }
     public Projeto Projeto { get; set; }
     public IDictionary<string, string> Parametros
@@ -40,7 +41,17 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Base
     public string Extensao { get; protected set; }
     public virtual string NomeClasse => $@"{Prefixo}{NomeEntidade}{Sufixo}";
     public virtual string NomeArquivo => $@"{Prefixo}{NomeEntidade}{Sufixo}";
-
+    public IList<string> Resources
+    {
+      get
+      {
+        if (resources == null)
+        {
+          resources = new List<string>();
+        }
+        return resources;
+      }
+    }
     public ConfigCodigoFonteBase(string sufixo, string prefixo, string template, string extensao)
     {
       Sufixo = sufixo;

@@ -23,7 +23,11 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Data
     public override void AdicionarParametros()
     {
       base.AdicionarParametros();
-      ConfigCodigoFonte.Parametros.Add("NomeResourceInfoServer", new NomeResourceInforServer(ConfigCodigoFonte.NomeEntidade).ToString());
+
+      string nomeResource = Constantes.SSauInfoServer + ConfigCodigoFonte.NomeEntidade;
+      ConfigCodigoFonte.Resources.Add(nomeResource);
+
+      ConfigCodigoFonte.Parametros.Add("NomeResourceInfoServer", nomeResource);
       ConfigCodigoFonte.Parametros.Add("NomeClasseDataSet", ConfigCodigoFonte.Prefixo + ConfigCodigoFonte.NomeEntidade);
       ConfigCodigoFonte.Parametros.Add("NomeClasseDataProps", ConfigCodigoFonte.Prefixo + ConfigCodigoFonte.NomeEntidade + Constantes.SufixoProps);
       ConfigCodigoFonte.Parametros.Add("NomeTabela", NomeTabela ?? string.Empty);

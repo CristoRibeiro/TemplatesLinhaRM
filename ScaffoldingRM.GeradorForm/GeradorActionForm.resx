@@ -138,7 +138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtNomeForm.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="nomeAction.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -165,13 +165,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;nomeAction.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>301, 11</value>
+    <value>299, 11</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 13</value>
@@ -192,10 +192,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="txtSaidaAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 29</value>
+    <value>300, 29</value>
   </data>
   <data name="txtSaidaAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 20</value>
@@ -213,61 +213,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtSaidaAction.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="cbbTemplateAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 71</value>
-  </data>
-  <data name="cbbTemplateAction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 21</value>
-  </data>
-  <data name="cbbTemplateAction.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;cbbTemplateAction.Name" xml:space="preserve">
-    <value>cbbTemplateAction</value>
-  </data>
-  <data name="&gt;&gt;cbbTemplateAction.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbbTemplateAction.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cbbTemplateAction.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 55</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Template Form:</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 54</value>
+    <value>9, 52</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -315,10 +267,10 @@
     <value>5</value>
   </data>
   <data name="txtProject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 72</value>
+    <value>12, 68</value>
   </data>
   <data name="txtProject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 20</value>
+    <value>540, 20</value>
   </data>
   <data name="txtProject.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>

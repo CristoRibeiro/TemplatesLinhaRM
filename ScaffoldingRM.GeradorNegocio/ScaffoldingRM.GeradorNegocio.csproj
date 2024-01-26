@@ -147,6 +147,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -178,13 +179,32 @@
     <Compile Include="CodigoFonte\Modulo\FactoryCodigoFonteModulo.cs" />
     <Compile Include="CodigoFonte\Modulo\FactoryConfigCodigoFonteInterfaceModulo.cs" />
     <Compile Include="CodigoFonte\Modulo\FactoryConfigCodigoFonteModulo.cs" />
+    <Compile Include="CodigoFonte\Process\CriarProcessFormCodigoFonteDesigner.cs" />
+    <Compile Include="CodigoFonte\Process\CriarProcessServerCodigoFonte.cs" />
+    <Compile Include="CodigoFonte\Process\CriarProcessParamsProcCodigoFonte.cs" />
+    <Compile Include="CodigoFonte\Process\CriarProcessFormCodigoFonte.cs" />
+    <Compile Include="CodigoFonte\Process\CriarProcessActionCodigoFonte.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryCodigoFonteProcessServer.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryCodigoFonteProcessParamsProc.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryCodigoFonteProcessForm.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryCodigoFonteProcessAction.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryConfigCodigoFonteProcessFormDesigner.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryConfigCodigoFonteProcessServer.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryConfigCodigoFonteProcessParamsProc.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryConfigCodigoFonteProcessForm.cs" />
+    <Compile Include="CodigoFonte\Process\FactoryConfigCodigoFonteProcessAction.cs" />
     <Compile Include="CodigoFonte\RmsObject\CriarRmsObjectCodigoFonte.cs" />
     <Compile Include="CodigoFonte\RmsObject\FactoryCodigoFonteRmsObject.cs" />
     <Compile Include="CodigoFonte\RmsObject\FactoryConfigCodigoFonteRmsObject.cs" />
     <Compile Include="CodigoFonte\ObjectItem\CriarObjectItemCodigoFonte.cs" />
     <Compile Include="CodigoFonte\ObjectItem\FactoryCodigoFonteObjectItem.cs" />
     <Compile Include="CodigoFonte\ObjectItem\FactoryConfigCodigoFonteObjectItem.cs" />
-    <Compile Include="Common\NomeResourceInforServer.cs" />
+    <Compile Include="CodigoFonte\RMSServer\CriarInterfaceRmsServerCodigoFonte.cs" />
+    <Compile Include="CodigoFonte\RMSServer\CriarRmsServerCodigoFonte.cs" />
+    <Compile Include="CodigoFonte\RMSServer\FactoryCodigoFonteInterfaceRmsServer.cs" />
+    <Compile Include="CodigoFonte\RMSServer\FactoryCodigoFonteRmsServer.cs" />
+    <Compile Include="CodigoFonte\RMSServer\FactoryConfigCodigoFonteInterfaceRmsServer.cs" />
+    <Compile Include="CodigoFonte\RMSServer\FactoryConfigCodigoFonteRmsServer.cs" />
     <Compile Include="ControleVersao\IControleVersao.cs" />
     <Compile Include="ControleVersao\Implementacoes\ComandosTFVC\CommandsTFVC.cs" />
     <Compile Include="CodigoFonte\Action\FactoryConfigCodigoFonteAction.cs" />
@@ -196,6 +216,7 @@
     <Compile Include="CodigoFonte\Form\CriarFormCodigoFonte.cs" />
     <Compile Include="Common\Projeto.cs" />
     <Compile Include="DTO\DTOFonteBase.cs" />
+    <Compile Include="DTO\DTOFonteProcessAction.cs" />
     <Compile Include="DTO\IDTOFonteBase.cs" />
     <Compile Include="DTO\DTOFonteDataProps.cs" />
     <Compile Include="DTO\DTOFonteDataSet.cs" />

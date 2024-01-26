@@ -1,0 +1,63 @@
+<#@ template hostspecific="true" language="C#" #>
+<#@ parameter type="System.String" name="NomeNameSpace" #>
+<#@ parameter type="System.String" name="NomeEntidade" #>
+<#@ parameter type="System.String" name="InfoServer" #>
+<#@ parameter type="System.String" name="NomeClasse" #>
+<#@ parameter type="System.String" name="NomeParamsProc" #>
+<#@ parameter type="System.String" name="NomeDto" #>
+<#@ parameter type="System.String" name="NomeInterfaceModulo" #>
+<#@ parameter type="System.String" name="NomeModulo" #>
+using RM.Lib;
+using RM.Lib.Notification;
+using RM.Lib.Server;
+using System;
+using RM.Sau.Extensions;
+
+namespace <#= NomeNameSpace #>
+{
+  [RMSServerInfo(typeof(Properties.Resources), nameof(Properties.Resources.<#= InfoServer #>), CodSistema.Sau)]
+  [RMSServerSecurityInfo(typeof(Properties.Resources), nameof(Properties.Resources.<#= InfoServer #>), CodSistema.Sau, 0)]
+  public class <#= NomeClasse #> : RMSProcess
+  {
+    protected override void DoReadParams(out RMSParamsProc paramsProc, object ownerData)
+    {
+      paramsProc = new <#= NomeParamsProc #>();
+      paramsProc.ProcessName = Properties.Resources.<#= InfoServer #>;
+    }
+
+    protected override void DoExecute(RMSParamsProc Params)
+    {
+      var notification = Notification.Instance;
+
+      <#= NomeParamsProc #> paramsProc = (<#= NomeParamsProc #>)Params;
+      <#= NomeDto #> dto = CarregaDto(paramsProc);
+
+      var logId = Properties.Resources.<#= InfoServer #>;
+      this.AbreLog(logId, Properties.Resources.SSauProcessoInicializado);
+      try
+      {
+        using (var mod = CreateModule<<#= NomeInterfaceModulo #>>("<#= NomeModulo #>"))
+        {
+          //notification.Add(mod.RealizarProcessamento(dto.CodColigada, 1));
+        }
+      }
+      catch (Exception e)
+      {
+        notification.AddError(ExceptionExtensions.CompleteMessage(e));
+      }
+      finally
+      {
+        this.FinalizaNotification(logId, notification);
+        this.FechaLog(logId, Properties.Resources.SSauProcessoFinalizado);
+      }
+    }
+
+    private <#= NomeDto #> CarregaDto(<#= NomeParamsProc #> paramsProc)
+    {
+      return new <#= NomeDto #>
+      {
+        CodColigada = paramsProc.CodColigada,
+      };
+    }
+  }
+}

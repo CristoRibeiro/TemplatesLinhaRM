@@ -133,7 +133,7 @@
     <value>14</value>
   </data>
   <data name="btnGerarObj.Text" xml:space="preserve">
-    <value>GerarObj</value>
+    <value>Gerar</value>
   </data>
   <data name="&gt;&gt;btnGerarObj.Name" xml:space="preserve">
     <value>btnGerarObj</value>
@@ -632,6 +632,243 @@
   </data>
   <data name="&gt;&gt;tabGeral.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="ckbGerarRmsServer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ckbGerarRmsServer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ckbGerarRmsServer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>362, 15</value>
+  </data>
+  <data name="ckbGerarRmsServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 17</value>
+  </data>
+  <data name="ckbGerarRmsServer.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="ckbGerarRmsServer.Text" xml:space="preserve">
+    <value>Gerar RmsServer</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarRmsServer.Name" xml:space="preserve">
+    <value>ckbGerarRmsServer</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarRmsServer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarRmsServer.Parent" xml:space="preserve">
+    <value>tabProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarRmsServer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ckbGerarRmsObjectProcess.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ckbGerarRmsObjectProcess.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ckbGerarRmsObjectProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 47</value>
+  </data>
+  <data name="ckbGerarRmsObjectProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 17</value>
+  </data>
+  <data name="ckbGerarRmsObjectProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="ckbGerarRmsObjectProcess.Text" xml:space="preserve">
+    <value>Gerar RmsObject</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarRmsObjectProcess.Name" xml:space="preserve">
+    <value>ckbGerarRmsObjectProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarRmsObjectProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarRmsObjectProcess.Parent" xml:space="preserve">
+    <value>tabProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarRmsObjectProcess.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ckbGerarFormProcess.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ckbGerarFormProcess.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ckbGerarFormProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 47</value>
+  </data>
+  <data name="ckbGerarFormProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 17</value>
+  </data>
+  <data name="ckbGerarFormProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="ckbGerarFormProcess.Text" xml:space="preserve">
+    <value>Gerar Form Process</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarFormProcess.Name" xml:space="preserve">
+    <value>ckbGerarFormProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarFormProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarFormProcess.Parent" xml:space="preserve">
+    <value>tabProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarFormProcess.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ckbGerarObjItemProcess.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ckbGerarObjItemProcess.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ckbGerarObjItemProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 47</value>
+  </data>
+  <data name="ckbGerarObjItemProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 17</value>
+  </data>
+  <data name="ckbGerarObjItemProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="ckbGerarObjItemProcess.Text" xml:space="preserve">
+    <value>Gerar ObjectItem</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarObjItemProcess.Name" xml:space="preserve">
+    <value>ckbGerarObjItemProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarObjItemProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarObjItemProcess.Parent" xml:space="preserve">
+    <value>tabProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarObjItemProcess.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ckbGerarParamsProcProcess.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ckbGerarParamsProcProcess.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ckbGerarParamsProcProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 15</value>
+  </data>
+  <data name="ckbGerarParamsProcProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 17</value>
+  </data>
+  <data name="ckbGerarParamsProcProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="ckbGerarParamsProcProcess.Text" xml:space="preserve">
+    <value>Gerar PramsProc</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarParamsProcProcess.Name" xml:space="preserve">
+    <value>ckbGerarParamsProcProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarParamsProcProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarParamsProcProcess.Parent" xml:space="preserve">
+    <value>tabProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarParamsProcProcess.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ckbGerarServerProcess.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ckbGerarServerProcess.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ckbGerarServerProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 15</value>
+  </data>
+  <data name="ckbGerarServerProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 17</value>
+  </data>
+  <data name="ckbGerarServerProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="ckbGerarServerProcess.Text" xml:space="preserve">
+    <value>Gerar Proc Server</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarServerProcess.Name" xml:space="preserve">
+    <value>ckbGerarServerProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarServerProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarServerProcess.Parent" xml:space="preserve">
+    <value>tabProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarServerProcess.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ckbGerarModuloProcess.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ckbGerarModuloProcess.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ckbGerarModuloProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 15</value>
+  </data>
+  <data name="ckbGerarModuloProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="ckbGerarModuloProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="ckbGerarModuloProcess.Text" xml:space="preserve">
+    <value>Gerar Módulo</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarModuloProcess.Name" xml:space="preserve">
+    <value>ckbGerarModuloProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarModuloProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarModuloProcess.Parent" xml:space="preserve">
+    <value>tabProcess</value>
+  </data>
+  <data name="&gt;&gt;ckbGerarModuloProcess.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabProcess.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>553, 135</value>
+  </data>
+  <data name="tabProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabProcess.Text" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="&gt;&gt;tabProcess.Name" xml:space="preserve">
+    <value>tabProcess</value>
+  </data>
+  <data name="&gt;&gt;tabProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabProcess.Parent" xml:space="preserve">
+    <value>rmsTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabProcess.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="rmsTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 1</value>

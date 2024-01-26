@@ -1,4 +1,5 @@
 ﻿using ScaffoldingRM.GeradorNegocio.CodigoFonte.Base;
+using ScaffoldingRM.GeradorNegocio.CodigoFonte.Data;
 using ScaffoldingRM.GeradorNegocio.Common;
 using ScaffoldingRM.GeradorNegocio.Enum;
 using ScaffoldingRM.GeradorNegocio.Interface;
@@ -31,7 +32,11 @@ namespace ScaffoldingRM.GeradorNegocio.CodigoFonte.Action
     public override void AdicionarParametros()
     {
       base.AdicionarParametros();
-      ConfigCodigoFonte.Parametros.Add("NomeCaptionForm", string.Format("SSCaption{0}", ConfigCodigoFonte.NomeEntidade));
+
+      string nomeResource = Constantes.SSauCaption + ConfigCodigoFonte.NomeEntidade;
+      ConfigCodigoFonte.Resources.Add(nomeResource);
+
+      ConfigCodigoFonte.Parametros.Add("NomeCaptionForm", nomeResource);
       ConfigCodigoFonte.Parametros.Add("CodigoSeguranca", "0");
       ConfigCodigoFonte.Parametros.Add("TipoRmsAction", "RMSActionMasterView");
 

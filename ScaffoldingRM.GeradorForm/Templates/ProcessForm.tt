@@ -1,0 +1,90 @@
+<#@ template hostspecific="true" language="C#" #>
+<#@ parameter type="System.String" name="NomeNameSpace" #>
+<#@ parameter type="System.String" name="NomeClasse" #>
+<#@ parameter type="System.String" name="TipoRmsForm" #>
+<#@ parameter type="System.String" name="NomeInterfaceServer" #>
+<#@ parameter type="System.String" name="NomeServer" #>
+<#@ parameter type="System.String" name="NomeParamsProc" #>
+using RM.Lib.WinForms;
+using RM.Lib;
+using System;
+using RM.Lib.Notification;
+
+namespace <#= NomeNameSpace #>
+{
+  public partial class <#= NomeClasse #> : <#= TipoRmsForm #>
+  {
+    public <#= NomeClasse #>()
+    {
+      InitializeComponent();
+    }
+
+    protected override void OnLoad(EventArgs e)
+    {
+      base.OnLoad(e);
+
+      int pageIndex = tbcWizard.TabPages.IndexOf(tabStep0);
+      base.Next(ref pageIndex);
+
+      tabStep0.Enabled = false;
+      tabStepN.Enabled = false;
+
+      PreencheDadosTela();      
+    }
+
+    protected override void Back(ref int pageIndex)
+    {
+      base.Back(ref pageIndex);
+    }
+
+    protected override void Next(ref int pageIndex)
+    {
+      if (pageIndex == tbcWizard.TabPages.IndexOf(tabStep1))
+      {
+        if (!ValidaParametros())
+          return;
+      }
+
+      base.Next(ref pageIndex);
+    }
+
+    protected override void Finish()
+    {
+      PreencheParametros();
+      base.Finish();
+    }
+
+    private void PreencheDadosTela()
+    {
+      using (var server = RMSBroker.CreateServer<I<#= NomeServer #>>("<#= NomeServer #>"))
+      {
+        /*
+            Lógica para preenchimento dos dados em tela. 
+            De preferencia realizar apenas uma chamada ao Server e carregar todos os dados necessários.
+        */
+      }      
+    }
+
+    private bool ValidaParametros()
+    {
+      INotification notification = Notification.Instance;
+      
+      notification.AddWarning("");
+
+      if (notification.HasAnyNotification)
+      {
+        RMSMessage.ShowWarning(notification.GetMessages());
+        return false;
+      }      
+
+      return true;
+    }
+
+    private void PreencheParametros()
+    {
+      <#= NomeParamsProc #> param = (<#= NomeParamsProc #>)this.Parameters;
+
+      param.CodColigada = RMSConvert.ToInt32(cCODCOLIGADA.Text);      
+    }
+  }
+}

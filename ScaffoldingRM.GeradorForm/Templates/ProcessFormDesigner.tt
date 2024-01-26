@@ -1,0 +1,158 @@
+<#@ template hostspecific="true" language="C#" #>
+<#@ parameter type="System.String" name="NomeClasse" #>
+<#@ parameter type="System.String" name="NomeNameSpace" #>
+namespace <#= NomeNameSpace #>
+{
+  partial class <#= NomeClasse #>
+  {
+    /// <summary>
+    /// Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    /// Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
+    {
+      if (disposing && (components != null))
+      {
+        components.Dispose();
+      }
+      base.Dispose(disposing);
+    }
+
+    #region Windows Form Designer generated code
+
+    /// <summary>
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(<#= NomeClasse #>));
+      this.cCODCOLIGADA = new RM.Lib.WinForms.RMSTextBox();
+      ((System.ComponentModel.ISupportInitialize)(this.tbcWizard)).BeginInit();
+      this.tbcWizard.SuspendLayout();
+      this.tabStep0.SuspendLayout();
+      this.tabStep1.SuspendLayout();
+      this.tabStepN.SuspendLayout();
+      this.pnlStepN.SuspendLayout();
+      this.pnlStep0.SuspendLayout();
+      this.pnlButtons.SuspendLayout();
+      this.pnlWizard.SuspendLayout();
+      this.SuspendLayout();
+      // 
+      // tbcWizard
+      // 
+      this.tbcWizard.Size = new System.Drawing.Size(800, 400);
+      // 
+      // tabStep0
+      // 
+      this.tabStep0.Size = new System.Drawing.Size(792, 374);
+      // 
+      // tabStep1
+      // 
+      this.tabStep1.Controls.Add(this.cCODCOLIGADA);
+      this.tabStep1.Size = new System.Drawing.Size(792, 374);
+      this.tabStep1.Controls.SetChildIndex(this.pnlTop1, 0);
+      this.tabStep1.Controls.SetChildIndex(this.cCODCOLIGADA, 0);
+      // 
+      // tabStepN
+      // 
+      this.tabStepN.Size = new System.Drawing.Size(792, 374);
+      // 
+      // btnBack
+      // 
+      this.btnBack.Location = new System.Drawing.Point(485, 13);
+      // 
+      // btnNext
+      // 
+      this.btnNext.Location = new System.Drawing.Point(560, 13);
+      // 
+      // btnCancel
+      // 
+      this.btnCancel.Location = new System.Drawing.Point(645, 13);
+      // 
+      // pnlStepN
+      // 
+      this.pnlStepN.Size = new System.Drawing.Size(792, 374);
+      // 
+      // lblStepNMsg2
+      // 
+      this.lblStepNMsg2.Location = new System.Drawing.Point(332, 60);
+      // 
+      // lblStepNMsg1
+      // 
+      this.lblStepNMsg1.Location = new System.Drawing.Point(330, 5);
+      // 
+      // pnlStep0
+      // 
+      this.pnlStep0.Size = new System.Drawing.Size(792, 374);
+      // 
+      // lblStep0Msg2
+      // 
+      this.lblStep0Msg2.Location = new System.Drawing.Point(279, 60);
+      // 
+      // lblStep0Msg1
+      // 
+      this.lblStep0Msg1.Location = new System.Drawing.Point(279, 5);
+      // 
+      // pnlTop1
+      // 
+      this.pnlTop1.Size = new System.Drawing.Size(792, 67);
+      // 
+      // pnlButtons
+      // 
+      this.pnlButtons.Location = new System.Drawing.Point(0, 400);
+      this.pnlButtons.Size = new System.Drawing.Size(800, 50);
+      // 
+      // pnlWizard
+      // 
+      this.pnlWizard.Size = new System.Drawing.Size(800, 400);
+      // 
+      // cCODCOLIGADA
+      // 
+      this.cCODCOLIGADA.Chriptography = false;
+      this.cCODCOLIGADA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+      this.cCODCOLIGADA.ForeColor = System.Drawing.SystemColors.ControlText;
+      this.cCODCOLIGADA.KeyPressed = false;
+      this.cCODCOLIGADA.Label.Caption = "";
+      this.cCODCOLIGADA.Label.Width = 33;
+      this.cCODCOLIGADA.Location = new System.Drawing.Point(34, 82);
+      this.cCODCOLIGADA.Name = "cCODCOLIGADA";
+      this.cCODCOLIGADA.Size = new System.Drawing.Size(100, 20);
+      this.cCODCOLIGADA.TabIndex = 1;
+      this.cCODCOLIGADA.Text = "cCODCOLIGADA";
+      // 
+      // <#= NomeClasse #>
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.ClientSize = new System.Drawing.Size(800, 450);
+      this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("<#= NomeClasse #>.IconOptions.Icon")));
+      this.Name = "<#= NomeClasse #>";
+      this.Text = "<#= NomeClasse #>";
+      ((System.ComponentModel.ISupportInitialize)(this.tbcWizard)).EndInit();
+      this.tbcWizard.ResumeLayout(false);
+      this.tabStep0.ResumeLayout(false);
+      this.tabStep1.ResumeLayout(false);
+      this.tabStep1.PerformLayout();
+      this.tabStepN.ResumeLayout(false);
+      this.pnlStepN.ResumeLayout(false);
+      this.pnlStepN.PerformLayout();
+      this.pnlStep0.ResumeLayout(false);
+      this.pnlStep0.PerformLayout();
+      this.pnlButtons.ResumeLayout(false);
+      this.pnlWizard.ResumeLayout(false);
+      this.ResumeLayout(false);
+      this.PerformLayout();
+
+    }
+
+    #endregion
+
+    private RM.Lib.WinForms.RMSTextBox cCODCOLIGADA;
+  }
+}
