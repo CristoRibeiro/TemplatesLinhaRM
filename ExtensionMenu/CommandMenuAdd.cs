@@ -22,7 +22,8 @@ namespace ExtensionMenu
     /// Command ID.
     /// </summary>
     public const int CommandId = 0x0100;
-    public const int CommandIdSec = 0x0200; 
+    public const int CommandIdSec = 0x0200;
+    public const int CommandIdTer = 0x0300;
     /// <summary>
     /// Command menu group (command set GUID).
     /// </summary>
@@ -50,8 +51,12 @@ namespace ExtensionMenu
       var menuCommandIDSec = new CommandID(CommandSet, CommandIdSec);
       var menuItemSec = new MenuCommand(this.ExecuteSec, menuCommandIDSec);
 
+      var menuCommandIDTer = new CommandID(CommandSet, CommandIdTer);
+      var menuItemTer = new MenuCommand(this.ExecuteSec, menuCommandIDTer);
+
       commandService.AddCommand(menuItem);
       commandService.AddCommand(menuItemSec);
+      commandService.AddCommand(menuItemTer);
     }
 
 

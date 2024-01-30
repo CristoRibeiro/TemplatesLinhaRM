@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\CommandMenuAdd.png" />
+    <Content Include="Resources\CommandMenu.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ScaffoldingRM.GeradorForm\ScaffoldingRM.GeradorForm.csproj">
