@@ -63,7 +63,7 @@ namespace ScaffoldingRM.GeradorNegocio
 
       AdicionarResources(configuracaoCodigoFonte, configuracaoCodigoFonte.Projeto.NomeProjetoCompleto);
 
-      GerarComandosAdicionais(configuracaoCodigoFonte);
+      GerarFontesAdicionais(configuracaoCodigoFonte);
     }
 
     private void AdicionarResources(IConfigCodigoFonte configuracaoCodigoFonte, string projectName)
@@ -215,10 +215,10 @@ namespace ScaffoldingRM.GeradorNegocio
         gerador.AddParameter(null, null, item.Key, item.Value);
     }
 
-    private void GerarComandosAdicionais(IConfigCodigoFonte configuracaoCodigoFonte)
+    private void GerarFontesAdicionais(IConfigCodigoFonte configuracaoCodigoFonte)
     {
-      foreach (var comando in configuracaoCodigoFonte.FontesAdicionais)
-        comando.Value.GerarCodigoFonte();
+      foreach (var fonte in configuracaoCodigoFonte.FontesAdicionais)
+        fonte.Value.GerarCodigoFonte();
     }
   }
 }
